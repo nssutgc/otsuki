@@ -1,0 +1,28 @@
+<div class="contents-wrapper">
+  <div class="show-wrapper">
+    <div class="show-frame">
+      <div class = "show-show">
+        <p class ="showname"><%= @user.name %></p>
+        <img class = "show-image" src= "<%= "/user_images/#{@user.image_name}" %>" >
+        <%= form_tag("/users/#{@user.id}/update",{multipart:true}) do %>
+        <ul class = "status">
+        <li>名前：<%= @user.name %></li>
+        <li>ニックネーム：<input type="text" name="nickname" value="<%= @user.nickname %>"></li>
+        <li>卒業：<%= @user.age %>年度</li>
+        <li>ポジション：
+          <input type="text" name="position" value="<%= @user.position %>"></li>
+        <li>家族構成：
+          <input type="text" name="family" value="<%= @user.family %>"></li>
+        <li>所属チーム：
+          <input type="text" name="team" value="<%= @user.team %>"></li>
+        <li>プロフィール画像：
+            <input type="file" name="image"></li>
+        <p><input type="submit" name="" value="更新"></p>
+        </ul>
+
+        <% end %>
+        <p class = "backbotton"><%= link_to("詳細に戻る","/users/#{@user.id}") %></p>
+      </div>
+    </div>
+  </div>
+</div>

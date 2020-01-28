@@ -1,0 +1,16 @@
+<div class="contents-wrapper">
+  <div class="login-wrapper">
+    <div class="login-frame">
+      <p>ログイン</p>
+     <%= form_tag("/login") do %>
+      <div class = "login">
+        <p>ニックネーム</p>
+        <input type="string" name="nickname" value="">
+        <p>パスワード</p>
+        <input type="password" name="password" value="">
+        <input type="submit" name="" value="ログイン">
+      </div>
+     <% end %>
+    </div>
+  </div>
+</div>

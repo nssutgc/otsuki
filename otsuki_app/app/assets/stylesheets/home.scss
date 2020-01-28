@@ -1,0 +1,374 @@
+// Place all the styles related to the home controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+// 共通レイアウト
+html, body,
+ul, li,
+h1, h2, h3, h4, h5, h6,
+p, div {
+  margin: 0;
+  padding: 0;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+a {
+  text-decoration: none;
+  margin: 0 auto ;
+}
+
+li {
+  list-style: none;
+}
+
+
+
+.header{
+  width: 100%;
+  height:auto;
+  background-color: black;
+  position: fixed;
+
+}
+
+
+.sakura{
+  float:left;
+  width:70px;
+  height:70px;
+  margin:20px 10px 20px 30px;
+
+}
+
+.header-logo{
+  color:white;
+  float: left;
+  text-align: center;
+  font-size: 25px;
+  font-weight: bold;
+  margin:20px 0px 20px 10px;
+}
+
+.header-logo p{
+  font-size: 60px;
+}
+
+
+.header-menu{
+  color:white;
+  display: flex;
+  margin-left: 200px;
+  margin-right: 30px;
+
+}
+
+
+
+.header-menu li{
+  height:60px;
+  color:white;
+  margin-top: 30px;
+  margin-left: 30px;
+  padding-bottom: 5px;
+  font-size: 12px;
+  font-weight:bold;
+  border-bottom: 2px solid gray;
+  text-align: center;
+  cursor: pointer;
+
+}
+
+.header-menu li span{
+  color:#CCCC99;
+  font-size: 20px;
+  font-weight: bold;
+}
+.header-menu li span a:link, a:visited{
+  color: #CCCC99;
+}
+
+.menu{
+  height:50px;
+  width:50px;
+  float:right;
+  margin:35px 20px 0px 0px;
+  display:none;
+
+}
+
+.message{
+  float:left;
+  height:40px;
+  line-height: 40px;
+  width: 100%;
+  font-size: 20px;
+  background-color: rgba(0,0,255,0.7);
+  color:white;
+  text-align: center;
+
+
+
+}
+
+// topレイアウト
+
+.main{
+
+}
+
+
+.top{
+  width:100%;
+  height:700px;
+  background:url("/ball.jpg");
+  background-size: cover;
+  background-repeat:  no-repeat;
+  background-position:center center;
+
+}
+.nssu{
+  padding-top: 200px;
+  text-align: center;
+  color:white;
+}
+
+.nssu span{
+  color:#CCCC99;
+}
+
+.just{
+  padding-top: 120px;
+  margin-left: 300px;
+  margin-right: 300px;
+  text-align: center;
+  color:white;
+  font-size: 150px;
+  font-family: 'Impact';
+  border-bottom: 1px solid gray;
+}
+
+.sub{
+  padding-top: 20px;
+  margin-left: 400px;
+  margin-right: 400px;
+  text-align: center;
+  color:white;
+  font-size: 25px;
+
+
+
+}
+
+.contents-wrapper{
+  width:100%;
+  height:auto;
+  background:linear-gradient(rgba(0, 0, 0, .8), rgba(150, 150, 0, .8)),url("/grass.jpeg");
+  background-size: cover;
+  background-repeat:  no-repeat;
+
+}
+
+.contents{
+  height:auto;
+  display:flex;
+  flex-wrap: wrap;
+}
+.content{
+  flex:auto;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  width:25%;
+
+}
+.content img{
+  width: 80%;
+　height: 80%;
+  margin-bottom:10px ;
+  box-shadow: 8px 8px 0 black;
+
+}
+
+.content p {
+  color:white;
+  font-weight: bold;
+  display: inline-block;
+  background-color: gray;
+  width:80%;
+  height:auto;
+  border:1px solid white;
+  box-shadow: 8px 8px 0 black;
+  text-shadow: 2px 2px 0 black;
+  cursor: pointer;
+}
+
+.content p span{
+  color:#CCCC99;
+  font-size: 20px
+}
+
+.content p span:link{
+  color:#CCCC99;
+  font-size: 20px
+}
+.content p span:visited{
+  color:#CCCC99;
+  font-size: 20px
+
+}
+
+
+
+
+
+.no{
+  display: inline-block;
+  padding-top: 20px;
+  text-align: center;
+  color:white;
+  font-size: 100px;
+  font-family:'Impact';
+
+
+
+}
+// historyレイアウト
+
+.history-wrapper{
+  width: 80%;
+  height: auto;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.history-frame{
+  background:linear-gradient(rgba(255, 255, 255, .97), rgba(255, 255, 255, .97)),url("/sakura.jpg"),;
+  background-size: cover;
+  width: 100%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+.history-text{
+  width: 50%;
+  float:right;
+  font-size: 13px;
+  padding-top: 40px;
+  padding-right: 40px;
+}
+.history-photo{
+  width: 50%;
+  float:left;
+  padding: 20px;
+}
+
+.stadium{
+  width: 90%;
+
+}
+
+// photoレイアウト
+
+
+
+// 共通レイアウト
+.footer{
+  height: 120px;
+  width: 100%;
+  color: white;
+  background-color: black;
+
+}
+
+.tlion{
+  float:left;
+  width:80px;
+  height:80px;
+  margin:10px 10px 20px 10px;
+}
+
+.footer-logo{
+  font-size: 30px;
+  float:left;
+  margin:30px 10px 20px 10px;
+  font-weight: bold;
+  text-align: center;
+
+}
+
+
+
+
+
+
+@media (max-width: 1238px) {
+
+  .sub{
+    display: none;
+  }
+  .content {
+    height:auto;
+    width: 50%;
+
+  }
+  .header-menu{
+    display: none;
+  }
+  .just{
+    margin-left: 100px;
+    margin-right: 100px;
+    border-bottom:none;
+  }
+  .menu{
+    display:none;
+  }
+
+  .dorons{
+      height: 150px;
+      width:auto;
+      background-color: white;
+      float:right;
+      padding-top: 10px;
+
+    }
+
+
+
+
+
+}
+@media (max-width: 1000px) {
+  //1000historyレイアウト
+  .history-frame{
+    height: 300px;
+  }
+  .history-text{
+    font-size: 10px;
+    padding-top: 20px;
+    padding-right: 20px;
+  }
+
+}
+
+
+@media (max-width: 800px) {
+  .content{
+    height:auto;
+    width: 100%;
+  }
+  .just{
+    font-size: 80px;
+    margin-left: 50px;
+    margin-right: 50px;
+}
+.no{
+  display:none;
+}
+//1000historyレイアウト
+.history-frame{
+  height: 340px;
+}
+}

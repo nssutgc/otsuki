@@ -1,0 +1,16 @@
+<div class="contents-wrapper">
+  <div class="news-wrapper">
+    <div class="news-frame">
+      <div class="news-box">
+      <% @posts.each do |post|%>
+        <div class = "news-list">
+          <%= link_to(post.content,"/posts/#{post.id}")%>
+          <p class = "postname"><%= post.user.nickname %></p>
+
+        </div>
+        <% end %>
+        <a href ="/posts/new"><input type= "submit" value = "新規投稿" ></a
+      </div>
+    </div>
+  </div>
+</div>

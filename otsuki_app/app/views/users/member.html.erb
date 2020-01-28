@@ -1,0 +1,11 @@
+<div class="contents-wrapper">
+  <div class="member-wrapper">
+    <div class="member-frame">
+      <% @users.each do |user| %>
+        <div class = "member-list">
+          <%= link_to(user.name,"/users/#{user.id}") %>
+        </div>
+      <% end %>
+    </div>
+  </div>
+</div>

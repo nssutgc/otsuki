@@ -1,0 +1,117 @@
+// Place all the styles related to the posts controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+.contents-wrapper{
+  width:100%;
+  height:auto;
+  background:linear-gradient(rgba(0, 0, 0, .8), rgba(150, 150, 0, .8)),url("/grass.jpeg");
+  background-size: cover;
+  background-repeat:  no-repeat;
+}
+
+
+// newsレイアウト
+
+.news-wrapper{
+  width: 80%;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.news-frame{
+  width: 100%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+  display:inline-block;
+  border:1px solid green;
+}
+
+.news-box{
+  float:right;
+  width:50%;
+  border:1px solid blue;
+}
+.news-list {
+  color:gray;
+  font-size: 20px;
+  border-bottom: 1px solid gray;
+  padding-top: 10px;
+  border:1px solid red;
+}
+
+.news-list a:link{
+  color:black;
+}
+.news-list a:visited{
+  color:black;
+}
+
+.postname{
+  float:right;
+  font-size: 12px;
+
+}
+
+// newレイアウト
+.new-wrapper{
+  width: 80%;
+  height: auto;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.new-frame{
+  width: 100%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+
+
+}
+.new-frame textarea{
+  width: 80%;
+  height: 300px;
+  margin-top: 20px;
+  resize: none;
+  font-size: 20px;
+
+}
+.new-list{
+  color:gray;
+  font-size: 20px;
+  border-bottom: 1px solid gray;
+  padding-top: 10px;
+}
+
+// showレイアウト
+.postshow-wrapper{
+  width: 80%;
+  height: auto;
+  padding-top: 150px;
+  padding-bottom: 50px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.postshow-frame{
+  width: 100%;
+  height: 400px;
+  margin-left: auto;
+  margin-right: auto;
+  background-color: white;
+}
+.tweet{
+  border-bottom:2px solid black;
+}
+
+//editレイアウト
+
+.user-icon{
+  width:100px;
+  height:100px;
+
+}

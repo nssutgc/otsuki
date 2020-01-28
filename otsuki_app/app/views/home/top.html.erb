@@ -1,0 +1,40 @@
+<div class="main">
+    <div class="top">
+      <% if @current_user %>
+      <h1 class = nssu>Nippon Sports Sciense University<br><span>ISHIKAWA</span> Association</h1>
+      <h1 class = just>JUST DO IT.</h1>
+      <p class = sub>人生死ぬこと以外かすり傷</p>
+      <% end %>
+    </div>
+    <div class="contents-wrapper">
+      <div class="contents">
+      <% if @current_user %>
+        <div class="content">
+          <div class="content-icon">
+            <img src="<%= "/montana.jpeg" %>">
+          </div>
+          <p>歴史<br><span><%= link_to("HISTORY","/history")%></span></p>
+        </div>
+          <div class="content">
+            <div class="content-icon">
+              <img src="<%= "/49members.jpg" %>">
+            </div>
+            <p>メンバー<br><span><%= link_to("MEMBER","/users/member")%></span></p>
+          </div>
+          <div class="content">
+            <div class="content-icon">
+              <img src="<%= "/catch.jpg" %>">
+            </div>
+            <p>写真<br><span><%= link_to("PHOTO","/photo")%></span></p>
+          </div>
+          <div class="content">
+            <div class="content-icon">
+              <img src="<%= "/coach.jpg" %>">
+            </div>
+            <p>新着情報<br><span><%= link_to("NEWS","/posts/news")%></span></p>
+          </div>
+       </div>
+       <p class = no>No pain , no gain.</p>
+       <% end %>
+     </div>
+    </div>

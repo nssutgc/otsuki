@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>OtsukiApp</title>
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+  </head>
+  <div class="header">
+  <% if @current_user %>
+   <a href="/"><img class ="sakura" src="<%= "/sakura.jpg" %>"></a>
+   <% end %>
+   <div class="header-logo"><% if @current_user == nil %><p>お付き会</p><% end %><% if @current_user %>日本體育大学鎧球部<br>御付 石川会<% end %>
+  </div>
+   <ul class ="header-menu">
+     <% if @current_user %>
+     <li>ユーザー<br><span><%= link_to(@current_user.name,"/users/#{@current_user.id}") %></span></li>
+     <li>ホーム<br><span><%= link_to("HOME","/")%></span></li>
+     <li>歴史<br><span><%= link_to("HISTORY","/history")%></span></li>
+     <li>メンバー<br><span><%= link_to("MEMBER","/users/member")%></span></li>
+     <li>写真<br><span><%= link_to("PHOTO","/photo")%></span></li>
+     <li>新着情報<br><span><%= link_to("NEWS","/posts/news")%></span></li>
+     <li>ログアウト<br><span><%= link_to("LOGOUT","/logout",{method:"post"})%></span></li>
+     <% end %>
+     <% if @current_user == nil %>
+     <li>ログイン<br><span><%= link_to("LOGIN","/login")%></span></li>
+     <% end %>
+   </ul>
+    <img class = "menu" src= "<%= "/menu.jpg" %>">
+    <% if flash[:notice]%>
+    <div class="message"><%= flash[:notice] %></div>
+    <% end %>
+ </div>
+  <body>
+
+    <%= yield %>
+    <div class="footer">
+      <% if @current_user %>
+      <img class ="tlion" src= "<%= "/tlion.jpg" %>">
+      <div class="footer-logo">NSSU FOOTBALL<br>
+      </div>
+      <% end %>
+      <ul class ="footer-list">
+        <li></li>
+        <li></li>
+        <li></li>
+      </ul>
+    </div>
+  </body>
+</html>

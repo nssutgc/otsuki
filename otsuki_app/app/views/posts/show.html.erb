@@ -1,0 +1,14 @@
+<div class="contents-wrapper">
+  <div class="postshow-wrapper">
+    <div class="postshow-frame">
+      <img class ="user-icon" src="<%= "/user_images/#{@user.image_name}" %>" >
+      <p><%= @user.name %></p>
+      <p class ="tweet"><%= @post.content %></p>
+      <p><%= @post.created_at.strftime('%Y/%m/%d %H:%M')%></p>
+      <% if @current_user.id == @post.user_id %>
+        <%= link_to("編集する","/posts/#{@post.id}/edit") %>
+        <%= link_to("削除する","/posts/#{@post.id}/destroy",{method:"post"})%>
+      <% end %>
+    </div>
+  </div>
+</div>

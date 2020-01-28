@@ -1,0 +1,22 @@
+<div class="contents-wrapper">
+  <div class="show-wrapper">
+    <div class="show-frame">
+      <div class = "show-show">
+        <p class ="showname"><%= @user.name %></p>
+        <img class = "show-image" src= "<%= "/user_images/#{@user.image_name}" %>" >
+        <ul class = "status">
+        <li>名前：<span><%= @user.name %></span></li>
+        <li>ニックネーム：<span><%= @user.nickname %></span></li>
+        <li>卒業：<span><%= @user.age %>年度</span></li>
+        <li>ポジション：<span><%= @user.position %></span></li>
+        <li>家族構成：<span><%= @user.family %></span></li>
+        <li>所属チーム：<span><%= @user.team %></span></li>
+        </ul>
+        <% if @current_user.id == @user.id %>
+          <p class = "editbotton"><%= link_to("編集","/users/#{@user.id}/edit") %></p>
+        <% end %>
+        <p class = "backbotton"><%= link_to("一覧に戻る","/users/member") %></p>
+      </div>
+    </div>
+  </div>
+</div>

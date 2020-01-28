@@ -1,0 +1,13 @@
+<div class="contents-wrapper">
+  <div class="postshow-wrapper">
+    <%= form_tag("/posts/#{@post.id}/update") do %>
+      <div class="postshow-frame">
+        <img class ="user-icon" src= "<%= "/user_images/#{@user.image_name}" %>" >
+        <p><%= @user.name %></p>
+        <input type="text" name="content" value="<%= @post.content %>">
+        <p><%= @post.created_at.strftime('%Y/%m/%d') %></p>
+        <input type="submit" name="" value="更新">
+      </div>
+      <% end %>
+  </div>
+</div>
