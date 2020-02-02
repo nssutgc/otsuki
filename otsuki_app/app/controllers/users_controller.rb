@@ -44,6 +44,7 @@ before_action:admin_user,{only: [:new]}
       @user.position = params[:position]
       @user.family = params[:family]
       @user.team = params[:team]
+      @user.password = params[:password]
     if params[:image]
       @user.image_name = "#{@user.id}.jpg"
       image = params[:image]
@@ -84,7 +85,7 @@ before_action:admin_user,{only: [:new]}
 
     def admin_user
       if @current_user.id != 26
-        flash[:notice] = "アクセスできません"
+        flash[:notice] = "管理権限がありません"
         redirect_to("/users/member")
       end
     end
